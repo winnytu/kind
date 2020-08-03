@@ -18,7 +18,7 @@
                     <a class="nav-item nav-link" :class="{'active':curBlock=='burial'}" @click="goBlock('burial')" >土葬區</a>
                     <a class="nav-item nav-link" :class="{'active':curBlock=='cremation'}" @click="goBlock('cremation')" >火葬區</a>
                     <a class="nav-item nav-link" :class="{'active':curBlock=='christianity'}" @click="goBlock('christianity')" >基督區</a>
-                    <a class="nav-item nav-link" :class="{'active':curBlock=='buddhism'}" @click="goBlock('buddhism')" >佛教區</a>
+                    <a class="nav-item nav-link" :class="{'active':curBlock=='buddhism'}" @click="goBlock('buddhism')" >佛教道區</a>
                     <a class="nav-item nav-link" :class="{'active':curBlock=='transportation'}" @click="goBlock('transportation')" >交通資訊</a>
                 </div>
             </div>
@@ -177,6 +177,9 @@
           data: {
             curBlock:'' 
           },
+          created(){
+            document.addEventListener('scroll',this.changeBlock)
+          },
           methods: {
             goBlock: function (val) {
                 if (val == 'top'){
@@ -188,6 +191,31 @@
                     this.curBlock = val
                 }
                 
+            },
+            changeBlock:function (){
+                let x = document.documentElement.scrollTop+100||  document.body.scrollTop+100
+                let intro = document.getElementById('intro').offsetTop
+                let burial = document.getElementById('burial').offsetTop
+                let cremation = document.getElementById('cremation').offsetTop
+                let christianity = document.getElementById('christianity').offsetTop
+                let buddhism = document.getElementById('buddhism').offsetTop
+                let transportation = document.getElementById('transportation').offsetTop
+                
+                if (x<intro){
+                    this.curBlock = ''
+                } else if (x>intro && x <burial){
+                    this.curBlock = 'intro'
+                } else if (x>burial && x <cremation){
+                    this.curBlock = 'burial'
+                } else if (x>cremation && x <christianity){
+                    this.curBlock = 'cremation'
+                } else if (x>christianity && x <buddhism){
+                    this.curBlock = 'christianity'
+                } else if (x>buddhism && x <transportation){
+                    this.curBlock = 'buddhism'
+                } else {
+                    this.curBlock = 'transportation'
+                }
             }
           }
         })
