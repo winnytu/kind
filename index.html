@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div id="app">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" @click="goBlock('top')"><img src="./img/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" :class="{'active':curBlock=='intro'}" @click="goBlock('intro')" >簡介</a>
+                    <a class="nav-item nav-link" :class="{'active':curBlock=='burial'}" @click="goBlock('burial')" >土葬區</a>
+                    <a class="nav-item nav-link" :class="{'active':curBlock=='cremation'}" @click="goBlock('cremation')" >火葬區</a>
+                    <a class="nav-item nav-link" :class="{'active':curBlock=='christianity'}" @click="goBlock('christianity')" >基督區</a>
+                    <a class="nav-item nav-link" :class="{'active':curBlock=='buddhism'}" @click="goBlock('buddhism')" >佛教區</a>
+                    <a class="nav-item nav-link" :class="{'active':curBlock=='transportation'}" @click="goBlock('transportation')" >交通資訊</a>
+                </div>
+            </div>
+        </nav>
+        <div class="banner">
+            <div class="swiper-banner">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./img/banner11.jpg"></div>
+                    <div class="swiper-slide"><img src="./img/banner2.jpg"></div>
+                    <div class="swiper-slide"><img src="./img/banner3.jpg"></div>
+                </div>
+            </div>
+        <div id="intro" class="section-block intro-block container">
+            <div class="title">
+                <img src="./img/intro_title.png" alt="">
+            </div>
+            <div class="content">
+                    <p>慈愛的經營理念『順天自然、生命永恆、世代情深』說明慈愛充滿人道關懷之『尊重自然、關懷生命、聯繫情親』的深刻雋永經營意圖，人的生老命死，是順應大自然天理運行的法則。慈愛本著尊重自然的謙卑心，突破傳統墓地予人陰森冷感，營造自然溫馨的健康空間，慈愛關懷每一位先人長者，及後代子孫的權益，人性尊嚴得以無限延伸，使其生命意義成為永恆價值，並透過我們的細心經營管理，我們希望將慈愛墓園，原本被動性單純的營葬空間，轉化成為提供先人與家屬間，世世代代感情交流與聯繫的人性化空間與服務。</p>
+                    <p>慈愛墓園位於淡水區小坪頂，由新北投的政戰學校(復興崗)上去，僅需要15分鐘車程即 可抵達園區，是目前離台北市區最近且唯一合法的戶外墓園，購買者更擁有土地持分權狀永久使用權狀。與本園區緊鄰的有同為基督徒的福音山墓園與復活山莊墓園，在這裡安息的摯愛與親友們，除了可遠眺三芝鄉秀麗的風景外，更能夠一同感受到平安與喜樂。</p>           
+            </div>
+        </div>
+        <div  id="burial" class="section-block burial-block container">
+            <div class="title">
+                <img src="./img/burial_title.png" alt="">
+            </div>
+            <div class="content row">
+                <img class="col-5" src="./img/burial1.jpg" alt="">
+                <div class="line-wrapper col-1">
+                    <div class="line"></div>
+                </div>
+                <div class="txt col-6">
+                    土葬區之單位有個人位及夫妻位兩種，購買後若需變更，也可將土葬單位改為放置骨灰罈，作為家族式墓地（一個土葬個人位至多可放置三十個骨灰罈）
+                </div>
+            </div>
+            <div class="img-group row">
+                <div class="img col-md-4 col-sm-12">
+                    <img src="./img/burial2.jpg" alt="">
+                    <p>豪華家族塔</p>
+                </div>
+                <div class="img col-md-4 col-sm-12">
+                    <img src="./img/burial3.jpg" alt="">
+                    <p>百坪家族塔</p>
+                </div>
+                <div class="img col-md-4 col-sm-12">
+                    <img src="./img/burial4.jpg" alt="">
+                    <p>百坪土葬</p>
+                </div>
+            </div>
+        </div>
+        <div  id="cremation" class="section-block cremation-block container">
+            <div class="title">
+                <img src="./img/cremation_title.png" alt="">
+            </div>
+            <div class="content">
+                <div class="txt">火葬區之單位，依據需求的不同，單位大小亦有所差別：最小單位可放置一個骨灰罈，最大單位則以十人為限(可做為家族式墓園之用)。火葬單位的價格則依據單位的大小來計算。</div>
+                
+            </div>
+            <div class="img-group row">
+                <div class="img col-md-3 col-sm-6 col-12">
+                    <img src="./img/cremation1.jpg" alt="">
+                </div>
+                <div class="img col-md-3 col-sm-6 col-12">
+                    <img src="./img/cremation2.jpg" alt="">
+                </div>
+                <div class="img col-md-3 col-sm-6 col-12">
+                    <img src="./img/cremation3.jpg" alt="">
+                </div>
+                <div class="img col-md-3 col-sm-6 col-12">
+                    <img src="./img/cremation4.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div  id="christianity" class="section-block chritism-block container">
+            <div class="title">
+                <img src="./img/chritism_title.png" alt="">
+            </div>
+            <div class="content">
+                <img src="./img/banner11.jpg" alt="">
+            </div>
+        </div>
+        <div id="buddhism" class="section-block buddhism-block container">
+            <div class="title">
+                <img src="./img/budism_title.png" alt="">
+            </div>
+            <div class="content">
+                <div class="swiper-budism">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./img/buddhism1.jpg"></div>
+                        <div class="swiper-slide"><img src="./img/buddhism2.jpg"></div>
+                        <div class="swiper-slide"><img src="./img/buddhism3.jpg"></div>
+                    </div>
+                </div> 
+                <div class="swiper-pagination"></div>   
+            </div>
+        </div>
+        <div id="transportation" class="section-block map-block container">
+            <div class="title">
+                <img src="./img/section-title.png" alt="">
+            </div>
+            <div class="top-img">
+                <img src="./img/address.jpg" alt="">
+                <p>新北市淡水區埔子頂16-2號</p>
+                <p>客服專線:0800-808-658</p>
+            </div>
+            <div class="content row">
+                <div class="col-12 col-md-12 col-lg-5">
+                    <div class="map">
+                        <img src="./img/map.png" alt="">
+                    </div>
+                </div>
+                <div class="transportation col-md-12 col-lg-7">
+                    <div class="way">
+                        <div class="way-title">自行開車</div>
+                        <div class="detail">由台北市區往北投區經大業路至中央北路二段，再由復興崗旁稻香路上山約15分鐘車程。由關渡橋經大度路至中央北路二段，再由復興崗旁稻香路上山約15分鐘車程。</div>
+                    </div>
+                    <div class="way">
+                        <div class="way-title">搭乘捷運</div>
+                        <div class="detail">搭乘捷運淡水線至復興崗站下車，轉搭計程車車資約200元。</div>
+                    </div>
+                    <div class="way">
+                        <div class="way-title">專車接送</div>
+                        <div class="detail">幸福專車本公司備有交通車服務，請於一週前來電預約。</div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="tips">
+                <div class="tips-title">慈愛園區專用罐相關注意事項</div>
+                <div class="detail">
+                    <p>為避免因時間長久而造成骨灰罐發生潮濕、破損等相關爭議問題，本園區統一規定，必需採用經過本公司認證之骨灰罐，才可在園區使用與永久保固。</p>
+                    <p>特此聲明 如有任何相關問題請洽客服中心</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="title">
+                <div class="logo"><img src="./img/logo.png" alt=""></div>
+                <div class="line"></div>
+                <div class="official">
+                    <p>80北府一社字第162901號</p>
+                    <p>89北府社團字第125989號</p>
+                </div>
+            </div>
+            <div class="intro">
+                <p>政府立案 合法墓地</p>
+                <p>地址：新北市淡水區埔子頂16-2號</p>
+                <p>客服專線：0800-808-658</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script>
+        var app = new Vue({
+          el: '#app',
+          data: {
+            curBlock:'' 
+          },
+          methods: {
+            goBlock: function (val) {
+                if (val == 'top'){
+                    window.scrollTo(0,0)
+                    this.curBlock = ''
+                } else {
+                    var dom =  document.getElementById(val).offsetTop
+                    window.scrollTo(0,dom-100)
+                    this.curBlock = val
+                }
+                
+            }
+          }
+        })
+      </script>
+</body>
+</html>
+<style>
+html {
+    width: 100% !important;
+}
+  #app {
+    position: relative;
+    background-color: #C9BC9D;
+    color:#461C1C;
+    line-height: 1;
+    width: 100%;
+    padding-top: 70px;
+    }
+    .navbar {
+        background-color: #014626 !important;
+        height: 75px;
+        width: 100%;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 50;
+    }
+    .navbar .navbar-brand img{
+        width: 250px;
+        cursor: pointer;
+    }
+    .navbar .navbar-collapse {
+        flex-grow: unset;
+    }
+    .navbar .navbar-toggler-icon{
+        background-image: url('./img/manu.png');
+    }
+    .navbar .nav-item{
+        position: relative;
+        color:#fff !important;
+        cursor: pointer; 
+    }
+    .navbar .nav-item.active{
+        color:#E3CC99 !important;
+    }
+    .navbar .nav-item:hover{
+        color:#E3CC99 !important;
+    }
+
+    .navbar .nav-item:not(:last-child)::after{
+        content: '';
+        width: 1px;
+        height: 20px;
+        position: absolute;
+        background-color: #fff;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%)
+    }
+    .navbar .nav-item{
+        padding: 0 20px !important;
+        letter-spacing: 2px;
+    }
+    .navbar .navbar-collapse{
+        z-index: 100;
+        background:  #014626 !important;
+    }
+    @media (max-width: 992px) {
+        .navbar .nav-item:not(:last-child)::after{
+            display: none;
+        }
+        .navbar .nav-item{
+            padding: 10px !important;
+        }
+    }
+    .banner .swiper-banner { 
+        width: 100%;
+        height: 600px;
+        overflow: hidden;
+        text-align: center;
+    }
+    .section-block {
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+    }
+    .section-block .title {
+        text-align: center;
+        margin:70px 0 40px;
+    }
+    .section-block .title img{
+        width: 70%
+    }
+    .intro-block .content {
+        line-height: 2
+    }
+
+    .intro-block .content p:nth-child(2) {
+        margin-top: 20px;
+    }
+    .burial-block .content{
+        width: 100%;
+        background-color: rgba(127,85,55,0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .burial-block .content img {
+        width: 200px;
+    }
+    .burial-block .content .line-wrapper .line {
+        width: 1px;
+        height: 10rem;
+        background-color: rgba(127,85,55,0.6);
+    }
+    .burial-block .img-group {
+        margin-top: 30px;
+    }
+    .burial-block .img-group .img p{
+        font-size: 20px;
+        text-align: center;
+        margin-top: 15px;
+    }
+    .burial-block .img-group .img p{
+        width: 100%;
+    }
+    .burial-block .img-group .img img{
+        width: 100%;
+    }
+    .cremation-block .content .txt{
+        line-height: 2;
+    }
+    .cremation-block .img-group{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 50px 0 20px;
+        background-color: rgba(127,85,55,0.2);
+        margin: 0;
+        margin-top: 30px;
+    }
+    .cremation-block .img-group img{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .chritism-block .content img {
+        width: 100%;
+    }
+    .buddhism-block .content {
+        width: 100%;
+        height: 500px;
+        background-color: rgba(127,85,55,0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .buddhism-block .content .swiper-budism{
+        width: 550px;
+        overflow: hidden;
+        position: relative;
+    }
+    .buddhism-block .content .swiper-pagination{
+        bottom: 30px;
+    }
+    .buddhism-block .content .swiper-pagination .swiper-pagination-bullet {
+        margin: 0 10px;
+    }
+    .buddhism-block .content .swiper-pagination .swiper-pagination-bullet-active{
+        background:  rgba(127,85,55,0.8);
+    }
+    .buddhism-block .content .swiper-slide img {
+        width: 100%;
+    }
+    .map-block {
+        color: #614224;
+    }
+    .map-block .top-img{
+        text-align: center;
+    }
+    .map-block .top-img p:nth-child(2){
+        font-weight: 600;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .map-block .top-img img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .map-block .content {
+        display: flex;
+        margin-top: 50px;
+        flex-direction: row-reverse;
+        line-height: 1.5;
+
+    }
+    .map-block .content .map{
+        height: 400px;
+        line-height: 400px;
+        background-color: rgba(127,85,55,0.2);
+        margin-bottom: 30px;
+
+    }
+    .map-block .content .map img{
+        width: 100%;
+
+    }
+    .map-block .content .transportation  {
+        /* margin-right: 50px; */
+        
+    }
+    .map-block .content .transportation  .way{
+        margin-bottom: 50px;
+        color: rgba(112, 83, 75, 0.7);
+        
+    }
+
+    .map-block .content .transportation  .way .way-title{
+        font-weight: 600;
+        font-size: 20px;
+        color: #614224;
+        
+    }
+    .map-block .content .transportation  .way .way-title::after{
+        content:'';
+        display: block;
+        width: 468px;
+        height: 1px;
+        background: linear-gradient(to right,#552310, transparent);
+        margin: 10px 0;
+        
+    }
+    .map-block .tips .tips-title::after{
+        content:'';
+        display: block;
+        width: 468px;
+        height: 1px;
+        background: linear-gradient(to right,#552310, transparent);
+        margin: 10px 0;
+    }
+    .map-block .tips {
+        color: rgba(112, 83, 75, 0.7);
+        line-height: 1.5;
+        padding: 0;
+    }
+    .map-block .tips .tips-title{
+        font-weight: 600;
+        color: #614224;
+        font-size: 20px;
+        color: #614224;
+    }
+    .map-block .tips .detail p:last-child{ 
+        text-align: right;
+        margin-top:50px;
+    }
+    .footer {
+        background-color: #014626;
+        height: 180px;
+        color:#fff;
+        text-align: center;
+        padding-top: 20px;
+    }
+    .footer .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .footer .title p{
+        margin: 0;
+        line-height: 1.5;
+
+    }
+    .footer .title img  {
+        width: 200px
+    }
+    .footer .title .line {
+        width: 1px;
+        height: 30px;
+        background-color: #fff;
+        opacity: 0.5;
+        margin: 0 30px;
+    }
+    .footer .intro {
+        margin-top: 15px;
+    }
+
+  </style>
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script>
+        var mySwiper = new Swiper('.swiper-banner', {
+        // Optional parameters
+        loop: true,
+        autoplay: true,
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+        })
+        var mySwiper = new Swiper('.swiper-budism', {
+            // Optional parameters
+            loop: true,
+            autoplay: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        })
+</script>
