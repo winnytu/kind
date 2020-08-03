@@ -46,10 +46,10 @@
             </div>
             <div class="content row">
                 <img class="col-5" src="./img/burial1.jpg" alt="">
-                <div class="line-wrapper col-1">
+                <!-- <div class="line-wrapper col-1">
                     <div class="line"></div>
-                </div>
-                <div class="txt col-6">
+                </div> -->
+                <div class="txt col-7">
                     土葬區之單位有個人位及夫妻位兩種，購買後若需變更，也可將土葬單位改為放置骨灰罈，作為家族式墓地（一個土葬個人位至多可放置三十個骨灰罈）
                 </div>
             </div>
@@ -326,6 +326,7 @@ html {
         padding: 3rem;
         line-height: 1.5;
         margin: 0;
+        font-size: 18px;
     }
 
     .burial-block .content img {
@@ -335,6 +336,22 @@ html {
         width: 1px;
         height: 10rem;
         background-color: rgba(127,85,55,0.6);
+    }
+    .burial-block .content .txt{
+        position: relative;
+        padding-left: 50px;
+        box-sizing: border-box;
+    }
+    .burial-block .content .txt::before{
+        position: absolute;
+        content:'';
+        display: block;
+        width: 5px;
+        height: 10rem;
+        background-color: rgba(127,85,55,0.6);
+        top: 50%;
+        transform: translateY(-50%);
+        left: 30px;
     }
     .burial-block .img-group {
         margin-top: 30px;
@@ -352,7 +369,10 @@ html {
     }
     .cremation-block .content .txt{
         line-height: 2;
+        font-size: 18px;
+        position: relative;
     }
+    
     .cremation-block .img-group{
         width: 100%;
         box-sizing: border-box;
