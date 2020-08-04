@@ -189,6 +189,7 @@
                     var dom =  document.getElementById(val).offsetTop
                     window.scrollTo(0,dom-100)
                     this.curBlock = val
+                    document.getElementsByClassName("navbar-toggler")[0].click();
                 }
                 
             },
@@ -303,7 +304,7 @@
             display: none;
         }
         .navbar .nav-item{
-            padding: 20px 30px !important;
+            padding: 30px 40px !important;
             font-size:1.75rem;
         }
         .navbar .navbar-collapse{
@@ -335,6 +336,9 @@
     .intro-block .content {
         line-height: 2;
         font-size:1.25rem;
+    }
+    .intro-block .title {
+        margin:50px 0 ;
     }
 
     .intro-block .content p:nth-child(2) {
