@@ -54,15 +54,15 @@
                 </div>
             </div>
             <div class="img-group row">
-                <div class="img col-md-4 col-sm-12">
+                <div class="img col-xl-4 col-md-12">
                     <img src="./img/burial2.jpg" alt="">
                     <p>豪華家族塔</p>
                 </div>
-                <div class="img col-md-4 col-sm-12">
+                <div class="img col-xl-4 col-md-12">
                     <img src="./img/burial3.jpg" alt="">
                     <p>百坪家族塔</p>
                 </div>
-                <div class="img col-md-4 col-sm-12">
+                <div class="img col-xl-4 col-md-12">
                     <img src="./img/burial4.jpg" alt="">
                     <p>百坪土葬</p>
                 </div>
@@ -77,16 +77,16 @@
                 
             </div>
             <div class="img-group row">
-                <div class="img col-md-3 col-sm-6 col-12">
+                <div class="img col-lg-3 col-sm-6 col-12">
                     <img src="./img/cremation1.jpg" alt="">
                 </div>
-                <div class="img col-md-3 col-sm-6 col-12">
+                <div class="img col-lg-3 col-sm-6 col-12">
                     <img src="./img/cremation2.jpg" alt="">
                 </div>
-                <div class="img col-md-3 col-sm-6 col-12">
+                <div class="img col-lg-3 col-sm-6 col-12">
                     <img src="./img/cremation3.jpg" alt="">
                 </div>
-                <div class="img col-md-3 col-sm-6 col-12">
+                <div class="img col-lg-3 col-sm-6 col-12">
                     <img src="./img/cremation4.jpg" alt="">
                 </div>
             </div>
@@ -223,20 +223,31 @@
 </body>
 </html>
 <style>
-html {
-    width: 100% !important;
-}
-  #app {
-    position: relative;
-    background-color: #C9BC9D;
-    color:#461C1C;
-    line-height: 1;
-    width: 100%;
-    padding-top: 70px;
+    html {
+        width: 100% !important;
+    }
+    #app {
+        position: relative;
+        background-color: #C9BC9D;
+        color:#461C1C;
+        line-height: 1;
+        width: 100%;
+        padding-top: 70px;
+        font-size: 16px;
+    }
+    @media (max-width: 576px) {
+        #app {
+            font-size: 24px;
+        }
+    }
+    @media (max-width: 992px) {
+        #app {
+            font-size: 20px;
+        }
     }
     .navbar {
         background-color: #014626 !important;
-        height: 75px;
+        height: 6rem;
         width: 100%;
         justify-content: space-between;
         position: fixed;
@@ -258,6 +269,7 @@ html {
         position: relative;
         color:#fff !important;
         cursor: pointer; 
+        font-size: 1.25rem
     }
     .navbar .nav-item.active{
         color:#E3CC99 !important;
@@ -289,7 +301,7 @@ html {
             display: none;
         }
         .navbar .nav-item{
-            padding: 10px !important;
+            padding: 15px !important;
         }
     }
     .banner .swiper-banner { 
@@ -308,7 +320,7 @@ html {
         margin:70px 0 40px;
     }
     .section-block .title img{
-        width: 70%
+        width: 75%
     }
     .intro-block .content {
         line-height: 2
@@ -319,14 +331,14 @@ html {
     }
     .burial-block .content{
         width: 100%;
-        background-color: rgba(127,85,55,0.4);
+        background-color: rgba(127,85,55,0.2);
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 3rem;
         line-height: 1.5;
         margin: 0;
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 
     .burial-block .content img {
@@ -341,6 +353,7 @@ html {
         position: relative;
         padding-left: 50px;
         box-sizing: border-box;
+        font-size:1.25rem;
     }
     .burial-block .content .txt::before{
         position: absolute;
@@ -356,10 +369,29 @@ html {
     .burial-block .img-group {
         margin-top: 30px;
     }
+    @media (max-width: 992px) {
+        .burial-block .img-group {
+            margin: 0;
+            margin-top: 30px;
+            padding-top: 40px;
+            background-color: rgba(127,85,55,0.2);
+            box-sizing: border-box;
+        }
+    }
     .burial-block .img-group .img p{
-        font-size: 20px;
+        font-size: 2rem;
         text-align: center;
         margin-top: 15px;
+    }
+    .burial-block .img-group .img {
+        text-align: center;
+        
+    }
+    @media (max-width: 992px) {
+        .burial-block .img-group .img {
+            margin-bottom: 20px;
+            
+        }
     }
     .burial-block .img-group .img p{
         width: 100%;
@@ -367,9 +399,14 @@ html {
     .burial-block .img-group .img img{
         width: 100%;
     }
+    @media (max-width: 992px) {
+        .burial-block .img-group .img img{
+            width: 75%;
+        }
+    }
     .cremation-block .content .txt{
         line-height: 2;
-        font-size: 18px;
+        font-size:1.25rem;
         position: relative;
     }
     
@@ -391,7 +428,7 @@ html {
     .buddhism-block .content {
         width: 100%;
         height: 500px;
-        background-color: rgba(127,85,55,0.4);
+        background-color: rgba(127,85,55,0.2);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -422,7 +459,7 @@ html {
     }
     .map-block .top-img p:nth-child(2){
         font-weight: 600;
-        font-size: 24px;
+        font-size: 1.5rem;
         margin-bottom: 20px;
     }
     .map-block .top-img img{
@@ -447,19 +484,16 @@ html {
         width: 100%;
 
     }
-    .map-block .content .transportation  {
-        /* margin-right: 50px; */
-        
-    }
     .map-block .content .transportation  .way{
         margin-bottom: 50px;
         color: rgba(112, 83, 75, 0.7);
+        font-size: 1.25rem;
         
     }
 
     .map-block .content .transportation  .way .way-title{
         font-weight: 600;
-        font-size: 20px;
+        font-size: 1.5rem;
         color: #614224;
         
     }
@@ -484,11 +518,13 @@ html {
         color: rgba(112, 83, 75, 0.7);
         line-height: 1.5;
         padding: 0;
+        font-size: 1.25rem;
+
     }
     .map-block .tips .tips-title{
         font-weight: 600;
         color: #614224;
-        font-size: 20px;
+        font-size: 1.5rem;
         color: #614224;
     }
     .map-block .tips .detail p:last-child{ 
@@ -511,6 +547,7 @@ html {
     .footer .title p{
         margin: 0;
         line-height: 1.5;
+        font-size:1rem
 
     }
     .footer .title img  {
@@ -524,7 +561,8 @@ html {
         margin: 0 30px;
     }
     .footer .intro {
-        margin-top: 15px;
+        margin-top: 20px;
+        font-size:0.8rem
     }
 
   </style>
